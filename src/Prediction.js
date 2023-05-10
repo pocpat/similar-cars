@@ -5,7 +5,7 @@ const predictionKey = " 17e63e74876a483e9addfdab736ab711";
 const endpoint = "https://similarcarfinder.cognitiveservices.azure.com/";
 const projectId = "fb61c380-ef76-4d3f-a2d0-f382b0a7a5a8";
 const publishedName = "Iteration9";
-const imageUrl = "https://www.mynrma.com.au/-/media/2021-best-cars-ford-mustang-hero-desktop.jpg";
+const imageUrl = "https://imgcdn.oto.com/large/gallery/color/14/1631/honda-civic-hatchback-color-569628.jpg";
 
 const Prediction = (props) => {
     const { onTopTagsChange } = props;
@@ -68,7 +68,7 @@ const Prediction = (props) => {
   
     return (
       <div>
-        <img src={imageUrl} alt="Input" />
+        <img src={imageUrl} alt="Car" style={{ width: '700px', height: 'auto' }} />
         <ul>
           {topTags.map(tagAndCat => (
             <li key={tagAndCat.tag.tagName}>

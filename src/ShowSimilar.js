@@ -38,18 +38,16 @@ const ShowSimilar = (props) => {
             }
           
             const colorTagId = colorTagObject.tag.tagId;
-            //const bodyShapeTagId = bodyShapeTagObject.tag.tagId;
-            //const makeTag = makeTagObject.tag.tagName;
+            const bodyShapeTagId = bodyShapeTagObject.tag.tagId;
+            //const makeTag = makeTagObject.tag.tagId;
           
-            let images = await getTaggedImages([colorTagId]);
+            let images = await getTaggedImages([colorTagId,bodyShapeTagId]);
             console.log("images: " + images.length);
             //images = images.filter(image => image.tags.includes(bodyShapeTagObject.tag.tagName));
             images = images.filter(image => image.tags.find(tag => tag.tagName === makeTagObject.tag.tagName));
             console.log("makeTagObject.tag.tagName: " + makeTagObject.tag.tagName + " / images after filter: " + images.length);
             
-            //if (makeTag) {
-            //  images = images.filter(image => image.tags.includes(makeTag));
-            //}
+            
             setTaggedImages(images);
           }
 
@@ -64,7 +62,7 @@ const ShowSimilar = (props) => {
           <ul>
             {taggedImages.map(image => (
               <li key={image.id}>
-                <img src={image.thumbnailUri} alt={image.resizedImageUri} />
+                <img src={image.thumbnailUri} alt={image.resizedImageUri} style={{ width: '700px', height: 'auto' }} />
               </li>
             ))}
           </ul>
