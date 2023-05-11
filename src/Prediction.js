@@ -5,9 +5,14 @@ const predictionKey = " 17e63e74876a483e9addfdab736ab711";
 const endpoint = "https://similarcarfinder.cognitiveservices.azure.com/";
 const projectId = "fb61c380-ef76-4d3f-a2d0-f382b0a7a5a8";
 const publishedName = "Iteration9";
-const imageUrl = "https://imgcdn.oto.com/large/gallery/color/14/1631/honda-civic-hatchback-color-569628.jpg";
+
 
 const Prediction = (props) => {
+   // make input tor reusable image URL on the front page
+    const [imageUrl, setImageUrl] = useState("");
+    let userInput =(e) => setImageUrl(e.target.value);
+
+
     const { onTopTagsChange } = props;
     const [predictions, setPredictions] = useState([]);
     const [topTags, setTopTags] = useState([]);
@@ -34,10 +39,9 @@ const Prediction = (props) => {
       predict();  // here is some error
     }, []);
   
-    
-  
     // Calculate the top tags
     useEffect(() => {
+        if (predictions) {
         console.log("filter categories");
         // Define the tag categories and the tags that belong to each category
     const categories = [
@@ -57,6 +61,7 @@ const Prediction = (props) => {
         return {category: category.name, tag: topTag};
       });
       setTopTags(newTopTags);
+    }
     }, [ predictions]);
   
     // Pass the top tags back to the parent component
@@ -68,14 +73,17 @@ const Prediction = (props) => {
   
     return (
       <div>
+     <input type="text" value={imageUrl} onChange={userInput} style={{ width: '700px', height: 'auto' }}/> 
         <img src={imageUrl} alt="Car" style={{ width: '700px', height: 'auto' }} />
-        <ul>
+        
+        <ul >
           {topTags.map(tagAndCat => (
             <li key={tagAndCat.tag.tagName}>
              {tagAndCat.category} - {tagAndCat.tag.tagName}: {tagAndCat.tag.probability * 100}%
             </li>
           ))}
         </ul>
+        
       </div>
     );
   }
