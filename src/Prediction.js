@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { categories } from './categories.js';
+import { categories } from "./categories.js";
 import "./App.css";
-
 
 const predictionKey = process.env.REACT_APP_PREDICTION_KEY;
 const endpoint = process.env.REACT_APP_ENDPOINT;
@@ -29,17 +28,15 @@ const Prediction = (props) => {
       },
       body: JSON.stringify({ Url: imageUrl }),
     });
-console.log("response: " + response);
+    console.log("response: " + response);
     const data = await response.json();
     console.log("data.predictions: " + data.predictions);
     setPredictions(data.predictions);
   }
 
-  useEffect(() => {
-    predict(); // here is some error
-  }, []);
 
-  // Calculate the top tags
+
+  // Calculats the top tags
   useEffect(() => {
     if (predictions) {
       console.log("filter categories");
