@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Prototype to Showcase AI Solution (Mission 2)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*Similar Cars Finder*  is an application designed to showcase the power of AI technology in recognizing and recommending similar motor vehicles based on their visual characteristics. By leveraging a cloud-based AI service on Microsoft Azure, this app allows users to upload the URL of a car picture and instantly find a matching vehicle from the available stock, enabling efficient comparison and recommendation for customers.
 
-## Available Scripts
+This project was developed as part of Full-Stack Development studies, serving as a practical implementation to explore and apply various concepts and technologies. The primary focus of this project was on the backend functionality, and the user interface and user experience were not prioritized.
 
-In the project directory, you can run:
+# Technologies Used
+* JavaScript: The application is built using JavaScript for the frontend logic and interaction.
+* CustomVision.ai: The AI service provided by Microsoft Azure is utilized to train and deploy a custom model capable of recognizing motor vehicles based on their type, color, and make.
 
-### `npm start`
+# Installation and Usage
+To use the Similar Cars Finder application, follow these steps:
+Clone the repository to your local machine:<br>
+`cd <project_folder>`<br>
+git clone <br>
+`<repository_url>`<br>
+Install the required dependencies:<br>
+`npm install`<br>
+Start the application: <br>
+`npm run start`<br>
+This will launch the application on<br>
+[localhost:3000](http://localhost:3000/) in your web browser.<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once the application is running, you can begin finding similar cars by following these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Copy the URL of a car image that you wish to find similar matches for.
+* Paste the URL into the "Input Car URL" field in the application.
+* Click the "Get Predictions" button to initiate the recognition process.
+* Wait for the results to be displayed, showing similar cars from the stock.
+Please note that due to copyright restrictions, some image URLs may not work as expected.
