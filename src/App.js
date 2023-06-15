@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Input Car</h1>
+      <h1>Input Car URL</h1>
       <Prediction onTopTagsChange={handleTopTagsChange} topTags={topTags} />
       <h1>Similar Cars</h1>
       <ShowSimilar topTags={topTags} />
